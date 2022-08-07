@@ -1,0 +1,112 @@
+
+@media only screen and (max-width: 965px) {
+ .additional_info{
+  flex-direction: column;
+  align-items: center;
+ }
+.video_player{
+  display: none;
+}
+ footer .copyright {
+  width: 80%;
+  order: 1;
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+ } 
+ footer .stream_apps{
+  order: 2;
+  text-align: center;
+  margin-top: 15px;
+ }
+ footer .soc_buttons h6{
+  text-align: center;
+ }
+ footer .soc_buttons{
+  margin-bottom: 15px;
+ }
+}
+@media only screen and (max-width:790px) {
+  .movie_info{
+    display: none;
+  }
+  .Final_fantasy button,  .sanddust_movie_banner button{
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 598px) {
+  .footer_menu{
+    justify-content: flex-start;
+ }
+}
+@media only screen and (max-width: 929px) {
+.user_navigation .navigation_item{
+  display: none;
+}
+.user_tools{
+  display: none;
+}
+.user_navigation img{
+  display: block;
+}
+.user_navigation{
+  justify-content: flex-end;
+}
+}
+ @media only screen and (max-width:460px) {
+.movie_about{
+  display: none;
+}
+}
+ 
+
+
+@media only screen and (max-width:1024px) and (min-width:721px) {
+  
+  .slider_list >.movie_item{
+
+    width: calc(1450px - 115vw);
+    height: auto;
+  }
+
+
+}
+
+
+@media only screen and (max-width:722px) {
+ 
+  .slider_list >.movie_item{
+
+
+      width: 100%;
+      height: auto;
+
+  }
+}
+
+
+
+@media only screen and (max-width:1024px)  {
+
+.wrapped_movies_list{
+flex-wrap: wrap;
+}
+.wrapped_movies_item{
+
+  width: 46%;
+  height: auto;
+}
+
+
+.slider_list >.movie_item .movie_info_container{
+  font-size: calc(0.5rem + 1.5vw);
+  line-height: calc(1.5rem + 1.5vw);
+}
+
+.slider_list > .movie_item b {
+font-size: calc(0.5rem + 3.8vw);
+
+}
+
+
+}

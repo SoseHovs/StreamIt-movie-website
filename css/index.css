@@ -1,0 +1,768 @@
+
+
+
+
+@import url(fonts.css);
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+   scrollbar-width: thin;
+}
+
+html,body {
+    overflow-x: hidden;
+    font-family: Font Awesome regular, sans-serif;
+    background-color: #141414;;
+}
+
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+   
+   ::-webkit-scrollbar{
+   
+       width: 8px;
+       height: 8px;
+   }
+   
+   ::-webkit-scrollbar-thumb{
+       background-image:linear-gradient(to bottom,#e5091482, rgba(255,0,0,0) );
+       border-radius: 2px;
+   }
+   
+   ::-webkit-scrollbar-track{
+       background-color: #222222;
+   }
+
+
+
+.btn{
+    font-size: 15px;
+    padding: 11px 20px 11px 39px;
+    letter-spacing: 0.75px;
+    background-color: rgb(229, 9, 20);
+    border: 1.5px solid rgb(191, 0, 10);
+    color: white;
+    text-transform: uppercase;
+    background-image: url(../img/caret-right-solid.png);
+    background-repeat: no-repeat;
+    background-size: 23px 15px;
+    background-position: 12px 11px;
+    cursor: pointer;
+
+}
+
+
+.btn:hover{
+background-color: #bf000a;
+
+}
+
+img{
+    cursor: pointer;
+}
+
+.notification_ring{
+    position: fixed;
+    bottom: 27px;
+    left: 16px;
+    z-index:3;
+}
+
+.notification_ring:hover  .notif_container{
+
+transition: 
+    transform 175ms ease-in-out,
+    opacity 175ms ease-in-out;
+transform: translateY(0) scaleX(1);
+
+
+}
+.notif_container{
+  
+    position: absolute;
+    top: -23px;
+    left: 58px;
+    color: white;
+    transform: translateX(50%) scaleX(0);
+    
+    
+   
+    
+}
+.notif_container .arrow {
+    width: 12px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    top: 36px;
+    right: -1px;
+  }
+  
+  .notif_container .arrow .outer {
+    border-right: 20px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .notif_container .arrow .inner {
+    border-right: 20px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 2px;
+  }
+  
+  .notif_container p {
+    width: 165px;
+   height : 40px;
+    border: 1px solid #000000;
+    padding: 11px 8px;
+    border-radius: 6px;
+    margin: 8px 12px;
+    background-color: black;
+    font-size: 13px;
+  }
+  
+header{
+    background-image: linear-gradient(to right, rgb(0 0 0 / 90%), rgb(0 0 0 / 18%)  ), url(../img/0.bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: fit-content;
+    color: white;
+    padding-bottom: 40px;
+}
+
+.navigation{
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: #00000057;
+    z-index:5
+    
+}
+
+.user_navigation{
+    display:flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.user_navigation img{
+   display: none;
+}
+.navigation_item{
+    font-size: 16px;
+    padding: 15px 20px;
+    color: #ababab;
+    font-weight: 600;
+    background-image: url(../img/sort-down-solid.png);
+    background-repeat: no-repeat;
+    background-position: right 14px;
+    background-size: 12px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.navigation_item:nth-child(5){
+    position: relative;
+}
+.navigation_item span{
+    position: absolute;
+    background-color: #e50914;
+    color: white;
+    font-size: 9px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    top: 0;
+    right: 5px;
+}
+
+.navigation_item:hover{
+    color:#e50914;
+    background-image: url(../img/sort-down-solid_red.png);
+}
+
+.user_tools img:first-child{
+    margin: 0 45px;
+}
+
+.logo_wrapper{
+    border-left: 4px solid #e50914;
+    background-image: linear-gradient(to right,#e509143b, rgba(255,0,0,0) );
+}
+.logo_wrapper > img{
+    margin: 5px 0px;
+    padding: 7px 20px 7px 10px;
+}
+
+.movie_banner{
+    padding: 40px 7% 50px;
+    text-align: left;
+}
+.movie_banner h2{
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url(../img/texure.jpg);
+    color: transparent;
+    font-size: 70px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin: 20px 0 0;
+
+}
+
+.rating_info {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+.rating_info  span{
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: #656161;
+    font-weight: 900;
+    padding: 3px;
+    margin: 0 10px;
+}
+.rating_info b, .rating_info span{
+    color:white;
+}
+.rating_info p{
+    color: #ababab;
+    margin-left: 10px;
+}
+.movie_info{
+    padding: 20px 0 0;
+
+}
+.movie_info p:first-child{
+    color: #ababab;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 600;
+    margin: 15px 0 20px;
+    letter-spacing: 0.5px;
+
+}
+
+.movie_about 
+{
+    font-size: 17px;
+    line-height: 30px;
+    padding: 5px 0 27px;
+
+}
+.movie_about span{
+    color: #e50914;
+    font-weight: 700;
+        
+}
+.sand_dust_banner button{
+    margin:6px 0 46px;
+}
+
+
+.sanddust_movie_banner{
+   padding-top: 140px;
+}
+
+.sanddust_movie_banner button{
+   margin-top: 30px;
+}
+
+.banner_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video_player{
+    display: flex;
+    align-items: center;
+    letter-spacing: 5px;
+    color: #ababab;
+    margin-right:50px;
+    margin-top: 15px;
+} 
+
+  /* ............... Play button animation .......................... */
+  .outer_circle {
+    stroke-width: 1;
+    stroke-dasharray: 410; 
+     stroke-dashoffset: 0;
+    stroke-linecap: square;
+    transition: all .4s ease-out;
+  }
+  .glightbox_video:hover .outer_circle {
+  stroke-dashoffset:410;
+    transition: stroke .7s .4s ease-out, stroke-dashoffset .4s ease-out
+  }
+  .glightbox_video:hover
+  .play{
+      fill: white;
+    transition:fill .4s .3s ease-out;
+  }
+
+ /* ...............  Movie item .......................... */
+
+.container{
+color: white;
+padding: 100px 7% 0;
+ }
+
+ .container_title{
+    display: flex;
+    justify-content: space-between;
+ }
+ .container_title a{
+    color: #e50914;
+ }
+
+ .movie_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+
+.movie_container{
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   padding: 0px 2vw 0 0;
+}
+.latest_movies_list, .suggested_movies_list{
+   transition: all 1s;
+}
+
+.prev,  .next{
+   position: absolute;
+   display: block;
+   background-color: #0000007d;
+   width: 20px;
+   height: 40px;
+   z-index: 2;
+   background-repeat: no-repeat;
+   background-size: 20px;
+   background-position: center;
+   cursor: pointer;
+   
+   
+}
+.prev{
+   left: 0;
+   bottom: 50%;
+   top: 50%;
+   background-image: url(../img/left-arrow.png);
+
+ 
+}
+
+
+.next{
+   right: 0;
+   bottom: 50%;
+   top: 50%;
+   background-image: url(../img/right-arrow\ \(1\).png);
+}
+
+
+
+ .movie_item{
+    /* width: 313px;
+    height: 168px; */
+    width: calc(300px + 10vw);
+    height: 11vw;
+    position: relative;
+    margin: 25px 10px 0;  
+    /* transition: .7s; */
+ }
+
+ .movie_item img{
+   width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+ }
+
+.movie_info_container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   position: absolute;
+   top: 50%;
+   left: 5%;
+   transform: translateY(-50%);
+   font-size: calc(0.5rem + 0.5vw);
+   line-height: calc(1.5rem + 0.5vw);
+ }
+
+   .movie_list >.movie_item:hover{
+      transform: scale(1.1);
+      border-left: 5px solid  #e50914;
+      z-index: 1;
+      transition: .6s ease-out;
+
+   } 
+
+
+
+   .movie_list > .movie_item:first-child:hover{
+      transform: scale(1.1) translateX(12px);
+   }
+
+   .movie_list > .movie_item:last-child:hover{
+      transform: scale(1.1) translateX(-12px);
+   }
+
+
+   .movie_item:hover img{
+      filter: brightness(0.3);
+   }
+
+
+   .movie_item:hover .soc_tools{
+      display: block;
+   }
+   .movie_item:first-child{
+      margin-left: 0;
+   }
+   .movie_item:last-child{
+      margin-right: 0;
+   }
+   
+   .soc_tools{
+      display: none;
+   position: absolute;
+   right: 10px;
+   top: 0;
+   }
+   .soc_tools li{
+      background: white;
+      border-radius: 50%;
+      height: 27px;
+      width: 30px;
+      margin: 10px 0;
+      
+   }
+
+ .soc_tools li:nth-child(1){
+    background-image: url(../img/share_red.png);
+    background-repeat: no-repeat;
+    background-position: 1px;
+    background-size: 31px;
+ }
+
+ .soc_tools li:hover{
+    background-color: #e50914;
+ }
+
+ .soc_tools li:nth-child(1):hover{
+    background-image: url(../img/share_white.png);
+    background-position: 9px;
+    background-size: 16px;
+ }
+
+ .soc_tools li:nth-child(2){
+    background-image: url(../img/like_red.png);
+    background-repeat: no-repeat;
+    background-position: 6px 7px;
+    background-size: 18px;
+ }
+
+ .soc_tools li:nth-child(2):hover{
+    background-image: url(../img/like_white.png);
+    background-size: 18px;
+    background-position: 6px;
+ }
+
+ .soc_tools li:nth-child(3){
+    background-image: url(../img/plus_red.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 29px}
+
+ .soc_tools li:nth-child(3):hover{
+    background-image: url(../img/plus_white.png);
+    background-size: 17px;
+ }
+
+.movie_item b{
+   font-size: calc(0.5rem + 0.8vw);
+}
+ .movie_item button{
+   margin-top: 10px;
+   font-size: 11px;
+   font-size: calc(0.4rem + 0.2vw);
+   padding: 9px 16px 9px 33px;
+   background-size: 20px 13px;
+   background-position: 10% 45%;
+ }
+
+
+
+/* ..............Latest moveis.................... */
+
+
+.latest_movies_list, .suggested_movies_list{
+   justify-content: flex-start;
+}
+
+
+.latest_movies_item, .suggested_movies_item{
+   flex-shrink: 0;
+   width: 25%;
+   height: calc(32px + 10vw);
+
+}
+.latest_movies_list > .latest_movies_item:nth-child(4):hover{
+   transform: scale(1.1) translateX(-35px);
+}
+
+
+.suggested_movies_list > .suggested_movies_item:nth-child(4):hover{
+   transform: scale(1.1) translateX(-35px);
+}
+
+
+
+/* ..............US Top movies.................. */
+
+   .us_top_movies {
+      background-image:  linear-gradient(to right, rgb(0 0 0 / 60%), rgb(0 0 0 / 18%)  ), url(../img/7.banner_pirates.jpg);
+      background-repeat: no-repeat;
+      width: 87%;
+      height: fit-content;
+      margin: 70px auto 0;
+      background-position:  bottom;
+      padding: 40px 7% 0 3%;
+   }
+ 
+ 
+ .top_movies_list{
+    flex-direction: column;
+    align-items: flex-start;
+ }
+
+   .top_movies_item{
+      margin: 10px 0;
+   border: none;
+   height: 136px;
+   width: 261px;
+   border: 1px solid #daa52036;
+   }
+
+   .top_movies_item span>span:first-child{
+    text-transform: uppercase;
+    background-color: #656161;
+    font-weight: 900;
+    padding: 2px;
+    margin: 0 3px 0 0;
+    font-size: 10px;
+    }
+
+    .top_movies_item button{
+        display: none;
+    }
+
+    .top_movies_item:hover  button{
+        display: block
+    }
+
+    
+/* ----------------Final_fantasy------------------------------ */
+
+ .Final_fantasy{
+    color: white;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.671), rgb(0 0 0 / 70%)  ), url(../img/final-fantasy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3% 0;
+    margin-top: 100px;
+ }
+ .Final_fantasy .movie_info p{
+
+    color: #ababab;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 600;
+    margin: 15px 0 40px;
+    letter-spacing: 0.5px;
+ }
+ .Final_fantasy h3{
+    font-size: 30px;
+ }
+ .break {
+    display: block;
+ }
+
+ .trend_movies_list{
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .trend_movies_list img{
+    margin: 0 5px;
+    width: 18.5%;
+    height: auto;
+ }
+
+ .active_trend {
+    transition: all 0.4s ease; 
+    padding: 0.625em;
+    background: rgba(20, 20, 20, 0.5) ;
+    backdrop-filter: blur(0.0625em);
+    border: 0.0625em solid #292929;
+    transform: scale(1.3);
+    z-index: 1;
+ }
+
+
+ .zombie_world{
+    background-image:  linear-gradient(to right, rgb(0 0 0 / 93%), rgba(0, 0, 0, 0)  ),url(../img/banner-3zombie-island-banner-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 40px;
+    }
+
+    .zombie_world .rating_info span{
+        font-weight: unset;
+        background-color: unset;
+    }
+    .zombie_world button{
+        margin-bottom: 20px;
+    }
+
+
+    .zombie_world h2+p {
+        font-size: 23px;
+        margin: 25px 0;
+    }
+
+    .zombie_world h2+p  span{
+        color: #656161;
+    }
+
+    .zombie_world{
+       flex-direction: column;
+       align-items: flex-start;
+       border: 1px solid #ffffff0f;
+    }
+
+    .zombie_world .movie_navigation {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        background: #00000042;
+        
+    }
+
+    .zombie_world .movie_navigation li{
+        text-transform: uppercase;
+    margin: 0px 20px;
+    padding: 18px 7px;}
+
+    .zombie_world .movie_navigation li:first-child{
+        color: #e50914;
+        border-top: 3px solid #e50914 ;
+        background-image: linear-gradient(to bottom,#e5091482, rgba(255,0,0,0) );
+    }
+    
+
+     .reccomended_movies{
+        margin-bottom: 100px;
+     }
+
+
+
+     .additional_info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: #d1d0cf;
+        background-color: #191919;
+        padding-bottom: 60px;
+     }
+
+     footer .copyright{
+width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+     }
+     .copyright p{
+        font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+     }
+
+     .footer_menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+     }
+
+     .footer_menu li {
+        margin: 0 15px 20px 0;
+        transition: .5s;
+     }
+
+     .footer_menu li:hover{
+        color: #e50914;
+     }
+
+     footer .soc_buttons a{
+        background-color: white;
+        display: inline-block;
+        border-radius: 21px;
+        border: 5px solid #453e3e;
+        width: 37px;
+        height: 37px;
+        line-height: 29px;
+        padding-left: 6px;
+        transition: .5s;
+     }
+
+     footer .soc_buttons a:hover{
+        background-color: #bf000a;
+     }
+
+
+   
+
+     footer h6{
+        margin-bottom: 25px
+     }
+
+     .stream_apps img{
+        margin:  0 10px 0 0;
+     }
+     
+    
+
+  
