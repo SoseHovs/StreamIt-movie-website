@@ -104,7 +104,7 @@ flex-wrap: wrap;
 }
 
 .slider_list > .movie_item b {
-font-size: calc(0.5rem + 3.8vw);
+font-size: calc(1.2rem + 0.5vw);
 
 }
 
