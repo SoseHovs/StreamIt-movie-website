@@ -30,7 +30,7 @@ slider.forEach(sliders =>  sliders.addEventListener ('transitionend', function (
     if (direction === 1) {
         sliders.appendChild (sliders.firstElementChild);
     } else if (direction === -1) {
-        ssliders.prepend (sliders.lastElementChild);
+        sliders.prepend (sliders.lastElementChild);
     }
     sliders.style.transition = 'none';
     sliders.style.transform = 'translate(0)';
