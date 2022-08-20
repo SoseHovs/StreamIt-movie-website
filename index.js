@@ -5,6 +5,17 @@ let direction = 0;
 let x=1
 
 
+
+
+let width=slider[0].firstElementChild.offsetWidth
+let style= getComputedStyle(slider[0].children[1]);
+let itemMarginRight= style.marginRight;
+let itemMarginLeft=style.marginLeft
+let margins=parseInt(itemMarginRight)+parseInt(itemMarginLeft)
+let fullWidth = width+margins
+console.log(fullWidth)
+
+
 prev.forEach(prevs =>  prevs.addEventListener ('click', function () {
     direction = -1;
     if(prevs.classList.contains("prev2")){
@@ -12,7 +23,7 @@ prev.forEach(prevs =>  prevs.addEventListener ('click', function () {
     else {
     x=0
     }
-    slider[x].style.transform = 'translate(26.5%)';
+    slider[x].style.transform = "translate(" + fullWidth + "px)"
 })   
     )
 
@@ -22,7 +33,7 @@ next.forEach(nexts => nexts.addEventListener ('click', function () {
     else{
         x=0}
     direction = 1
-    slider[x].style.transform = 'translate(-26.5%)'
+    slider[x].style.transform = "translate(" + (-fullWidth) +"px)"
 })    )
 
 
