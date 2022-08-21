@@ -4,17 +4,12 @@ const prev = document.querySelectorAll('.prev');
 let direction = 0;
 let x=1
 
-
-
-
-let width=slider[0].firstElementChild.offsetWidth
+let width=slider[0].children[1].offsetWidth
 let style= getComputedStyle(slider[0].children[1]);
 let itemMarginRight= style.marginRight;
 let itemMarginLeft=style.marginLeft
 let margins=parseInt(itemMarginRight)+parseInt(itemMarginLeft)
 let fullWidth = width+margins
-console.log(fullWidth)
-
 
 prev.forEach(prevs =>  prevs.addEventListener ('click', function () {
     direction = -1;
@@ -51,3 +46,15 @@ slider.forEach(sliders =>  sliders.addEventListener ('transitionend', function (
     })
 }, false))
 
+
+
+let sideBar = document.querySelector(".sidebar")
+let menuLogo = document.querySelector(".menu_logo")
+
+menuLogo.addEventListener("click", function(){
+
+sideBar.classList.toggle("sidebarShow")
+sideBar.style.transition="1s"
+
+
+})

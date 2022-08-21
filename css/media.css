@@ -43,9 +43,9 @@
 .user_navigation .navigation_item{
   display: none;
 }
-.user_tools{
-  display: none;
-}
+.user_tools img:first-child {
+  margin: 0 20px;}
+
 .user_navigation img{
   display: block;
 }
@@ -73,17 +73,6 @@
 }
 
 
-@media only screen and (max-width:722px) {
- 
-  .slider_list >.movie_item{
-
-
-      width: 100%;
-      height: auto;
-
-  }
-}
-
 
 
 @media only screen and (max-width:1024px)  {
@@ -109,4 +98,31 @@ font-size: calc(1.2rem + 0.5vw);
 }
 
 
+}
+
+
+@media only screen and (max-width:722px) {
+ 
+  .slider_list >.movie_item{
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media only screen and (max-width:446px){
+
+  .wrapped_movies_item {
+    width: 100%;
+    height: auto;}
+
+
+ .movie_item .movie_info_container{
+      font-size: calc(0.5rem + 1.5vw);
+      line-height: calc(1.5rem + 1.5vw);
+    }
+    
+     .movie_item b {
+    font-size: calc(1.2rem + 0.5vw);
+    
+    }
 }
