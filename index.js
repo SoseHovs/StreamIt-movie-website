@@ -11,26 +11,19 @@ let itemMarginLeft=style.marginLeft
 let margins=parseInt(itemMarginRight)+parseInt(itemMarginLeft)
 let fullWidth = width+margins
 
-prev.forEach(prevs =>  prevs.addEventListener ('click', function () {
+
+
+
+prev.forEach((prevs, index) =>  prevs.addEventListener ('click', function () {
     direction = -1;
-    if(prevs.classList.contains("prev2")){
-    x=1}
-    else {
-    x=0
-    }
-    slider[x].style.transform = "translate(" + fullWidth + "px)"
+    slider[index].style.transform = "translate(" + fullWidth + "px)"
 })   
     )
 
-next.forEach(nexts => nexts.addEventListener ('click', function () {
-    if(nexts.classList.contains("next2")){
-        x=1}
-    else{
-        x=0}
+next.forEach((nexts,index) => nexts.addEventListener ('click', function () {
     direction = 1
-    slider[x].style.transform = "translate(" + (-fullWidth) +"px)"
+    slider[index].style.transform = "translate(" + (-fullWidth) +"px)"
 })    )
-
 
 slider.forEach(sliders =>  sliders.addEventListener ('transitionend', function () {
     if (direction === 1) {
@@ -47,6 +40,18 @@ slider.forEach(sliders =>  sliders.addEventListener ('transitionend', function (
 }, false))
 
 
+// ............................................................................
+
+
+
+
+
+
+
+
+
+
+
 
 let sideBar = document.querySelector(".sidebar")
 let menuLogo = document.querySelector(".menu_logo")
@@ -58,3 +63,9 @@ sideBar.style.transition="1s"
 
 
 })
+
+
+
+
+
+

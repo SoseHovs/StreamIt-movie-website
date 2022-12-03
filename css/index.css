@@ -394,7 +394,7 @@ padding: 100px 7% 0;
    width: 100%;
    padding: 0px 2vw 0 0;
 }
-.latest_movies_list, .suggested_movies_list{
+.slider_list{
    transition: all 1s;
 }
 
@@ -805,5 +805,9 @@ width: 50%;
      }
      
     
+
+ .adit_btn{
+      display: none;
+     }
 
   
