@@ -63,8 +63,11 @@
 
 @media only screen and (max-width:1024px) and (min-width:721px) {
   
+  .movie_list{
+    justify-content: flex-start;
+  }
   .slider_list >.movie_item{
-
+    flex-shrink: 0;
     width: calc(1450px - 115vw);
     height: auto;
   }
@@ -77,14 +80,14 @@
 
 @media only screen and (max-width:1024px)  {
 
-.wrapped_movies_list{
+/* .wrapped_movies_list{
 flex-wrap: wrap;
 }
 .wrapped_movies_item{
 
   width: 46%;
   height: auto;
-}
+} */
 
 
 .slider_list >.movie_item .movie_info_container{
