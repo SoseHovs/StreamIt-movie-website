@@ -2,7 +2,6 @@ const slider = document.querySelectorAll('.slider_list');
 const next = document.querySelectorAll('.next');
 const prev = document.querySelectorAll('.prev');
 let direction = 0;
-let x=1
 
 let width=slider[0].children[1].offsetWidth
 let style= getComputedStyle(slider[0].children[1]);
@@ -40,19 +39,6 @@ slider.forEach(sliders =>  sliders.addEventListener ('transitionend', function (
 }, false))
 
 
-// ............................................................................
-
-
-
-
-
-
-
-
-
-
-
-
 let sideBar = document.querySelector(".sidebar")
 let menuLogo = document.querySelector(".menu_logo")
 
@@ -63,9 +49,3 @@ sideBar.style.transition="1s"
 
 
 })
-
-
-
-
-
-
