@@ -189,7 +189,7 @@ header{
 }
 
 .navigation{
-    padding: 15px 7%;
+    padding: 15px 7% 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -208,17 +208,17 @@ header{
     justify-content: center;
 }
 
-.user_navigation img{
+.nav-hamburger{
    display: none;
 }
 .navigation_item{
     font-size: 16px;
-    padding: 15px 20px;
+    padding: 23px 20px;
     color: #ababab;
     font-weight: 600;
     background-image: url(../img/sort-down-solid.png);
     background-repeat: no-repeat;
-    background-position: right 14px;
+    background-position: right 25px;
     background-size: 12px;
     margin: 0 10px;
     cursor: pointer;
@@ -233,8 +233,8 @@ header{
     color: white;
     font-size: 9px;
     border-radius: 5px;
-    padding: 2px 5px;
-    top: 0;
+    padding: 1px 3px;
+    top: 14px;
     right: 5px;
 }
 
@@ -794,8 +794,6 @@ width: 50%;
      }
 
 
-   
-
      footer h6{
         margin-bottom: 25px
      }
@@ -803,11 +801,89 @@ width: 50%;
      .stream_apps img{
         margin:  0 10px 0 0;
      }
-     
     
-
- .adit_btn{
+    .adit_btn{
       display: none;
      }
 
+
+     /* menu items ------------------------------ */
+     .home_pages{
+      
+      opacity: 0;
+      height: 0;
+      overflow-y: hidden;
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+      top: 79px;
+      background-color: #000000;
+      width: 80%;
+      padding: 0 2%;
+     }
+
+     .home-items:hover .home_pages{
+      opacity: 1;
+      transition: 1s;
+      height: auto;
+    
+     }
+     .home_pages-item img{
+      width: 100%
+     }
+     .home_pages-item{
+      width: 17%;
+      padding: 2% 0;
+      
+     }
+     .home_pages-item b{
+      color:#ababab;
+      text-transform: uppercase;
+      padding: 15px 0 0;
+      display: inline-block;
+     }
+     .home_pages-item:hover{
+      transform: scale(1.05);
+      transition: 1s;
+     }
   
+     .sub_menu{
+      opacity: 0;
+      height: 0;
+      overflow-y: hidden;
+      position: absolute;
+      top: 79px;
+      background-color:#141414;
+      color: #ababab;
+      text-transform: capitalize;
+      font-weight: 100;
+      padding: 0.5% 1%;
+      width: 16vw;
+    font-size: 14px;
+     }
+     .subHover-items:hover .sub_menu{
+      opacity: 1;
+      transition: 1s;
+      height: auto;
+   }
+   
+   .sub_menu-item{
+      padding: 4.5% 3%;
+      transition: 1s;
+      margin: 10px 0;
+   }
+
+   .sub_menu-item:hover{
+      border-left: 4px solid #ff000d;
+      background-image: linear-gradient(to right,#e5091463, rgb(255 0 0 / 1%) );
+   }
+
+   .shop-menu {
+      top: 65px;
+   }
+
+
+
