@@ -668,7 +668,7 @@ padding: 100px 7% 0;
 
  .trend_movies_list img{
     margin: 0 5px;
-    width: 18.5%;
+    width: 19.5%;
     height: auto;
  }
 
@@ -887,3 +887,8 @@ width: 50%;
 
 
 
+/* swap trend movies ------------------------------- */
+
+.active_trend img{
+   width: 100%;
+}
