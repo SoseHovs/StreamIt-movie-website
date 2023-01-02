@@ -308,12 +308,24 @@ header{
 
 }
 
-.movie_about 
-{
+.movie_about .edit_info
+{text-transform: capitalize;
+   color: white;
     font-size: 17px;
     line-height: 30px;
     padding: 5px 0 27px;
+    font-weight: normal;
 
+}
+.trend_movies_list img:not(.active_trend img):hover{
+   transition: 1.3s;
+   transform: scale(1.2);
+
+}
+
+.active_trend:hover{
+   transition: 1.3s;
+   transform: scale(1.2);
 }
 .movie_about span{
     color: #e50914;
@@ -591,14 +603,45 @@ padding: 100px 7% 0;
 /* ..............US Top movies.................. */
 
    .us_top_movies {
-      background-image:  linear-gradient(to right, rgb(0 0 0 / 60%), rgb(0 0 0 / 18%)  ), url(../img/7.banner_pirates.jpg);
+      background-image: url(../img/7.banner_pirates.jpg);
+      /* linear-gradient(to right, rgb(0 0 0 / 60%), rgb(0 0 0 / 18%)  ), */
+      filter: brightness(0.8);
       background-repeat: no-repeat;
       width: 87%;
       height: fit-content;
       margin: 70px auto 0;
-      background-position:  bottom;
+      background-position:  top left;
+      background-size: cover;
       padding: 40px 7% 0 3%;
+      transition:1s
    }
+
+   .us_top_movies img{
+      filter: brightness(0.9);
+   }
+
+   .us_top_movies img:hover{
+      filter: brightness(0.5);
+   }
+   .topUsduration{
+ height: 0;
+ overflow-y: hidden;
+   }
+
+   .top_movies_item:hover .topUsduration{
+      transition: 1s;
+      height: 25px;
+  
+
+  }
+
+  .top_movies_item button{
+  display: none;
+}
+
+.top_movies_item:hover  button{
+    display: block
+}
  
  
  .top_movies_list{
@@ -623,13 +666,7 @@ padding: 100px 7% 0;
     font-size: 10px;
     }
 
-    .top_movies_item button{
-        display: none;
-    }
 
-    .top_movies_item:hover  button{
-        display: block
-    }
 
     
 /* ----------------Final_fantasy------------------------------ */
@@ -712,7 +749,6 @@ padding: 100px 7% 0;
     .zombie_world{
        flex-direction: column;
        align-items: flex-start;
-       border: 1px solid #ffffff0f;
     }
 
     .zombie_world .movie_navigation {
@@ -722,6 +758,9 @@ padding: 100px 7% 0;
         background: #00000042;
         
     }
+
+    .rating_info .rankingNumber {
+      margin: 0 0 0 -5px;}
 
     .zombie_world .movie_navigation li{
         text-transform: uppercase;
@@ -837,8 +876,9 @@ width: 50%;
      .home_pages-item{
       width: 17%;
       padding: 2% 0;
-      
+    
      }
+    
      .home_pages-item b{
       color:#ababab;
       text-transform: uppercase;

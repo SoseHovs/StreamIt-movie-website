@@ -1,0 +1,103 @@
+
+:root{
+--lightRed: #e50914
+}
+
+header{
+background: unset;
+padding: unset;
+}
+
+.download_app{
+    background-color: var(--lightRed);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.account_search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 3%;
+}
+
+.user_nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: black;
+}
+.user_navigation{
+    justify-content: flex-start;
+   
+}
+.user-icon{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: black;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+.navigation_item {
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    background-image: url(../img/down-filled-white\ triangular-arrow.png);
+    background-size: 10px 12px;
+    background-position-y: 23px;
+    transition: 1s;
+
+
+}
+.sub_menu li{
+    color: white;
+}
+.navigation_item:hover{
+    background-image: url(../img/down-filled-white\ triangular-arrow.png);
+}
+.Account_settings{
+
+    text-transform: capitalize;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+}
+.Account_settings li{
+    padding: 10px;
+    margin: 0 5px;
+font-size: 14px;
+}
+
+
+.navigation_item:nth-child(5) {
+    position:unset
+}
+
+.sub_menu-measure{
+    top: 172px;
+}
+input{
+    background-color: #000000;
+    border: none;
+    height: 40px;
+    padding-left: 15px;
+}
+.icons_wrapper{
+    display: flex;
+    align-items: center;
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.766);
+    text-transform: capitalize;
+}
+.search_wrapper{
+    display: flex;
+    align-items: center;
+    background: black;
+}
+
+
