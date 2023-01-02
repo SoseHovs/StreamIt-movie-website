@@ -29,6 +29,8 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: black;
+padding: 0 1.5%;
+
 }
 .user_navigation{
     justify-content: flex-start;
@@ -56,6 +58,10 @@ background-color: black;
 .sub_menu li{
     color: white;
 }
+.sub_menu{
+z-index: 1;
+    background-color: #000000;
+}
 .navigation_item:hover{
     background-image: url(../img/down-filled-white\ triangular-arrow.png);
 }
@@ -78,7 +84,7 @@ font-size: 14px;
 }
 
 .sub_menu-measure{
-    top: 172px;
+    top: 178px;
 }
 input{
     background-color: #000000;
@@ -98,6 +104,92 @@ input{
     display: flex;
     align-items: center;
     background: black;
+    padding: 4px 15px;
+
 }
 
+.prev, .next {
+    
+    width: 40px;
+    height: 40px;
+    background-size: 16px;
+    border: 2px solid #ffffff5c;
+    border-radius: 50%;
+}
+.movie_item{
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* flex-shrink: 0;
+    flex-grow: 0; */
+    margin: 0;
+}
 
+.movie_item img{
+    filter: brightness(1);
+}
+
+.movie_container{
+    padding: 0;
+}
+
+.movie_list >.movie_item:hover {
+    transform:scale(1);
+    border: none;
+    z-index:unset
+
+}
+.movie_list > .movie_item:first-child:hover,  .movie_list > .movie_item:last-child:hover{
+    transform: none}
+
+.movie_item img:hover{
+    filter: none;
+    transform: none;
+}
+
+.dot_list{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 50px;
+    margin: 3px auto;
+
+}
+
+.dot_wrapper{
+    display: block;
+    margin: 5px;
+    cursor: pointer;
+    padding: 0px 3px;
+    transition: 1s;
+    border: 2px solid rgba(255, 0, 0, 0);
+    border-radius: 50%;
+}
+
+.active, .dot_wrapper:hover{
+    border: 2px solid red;
+    border-radius: 50%;
+    
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .1} 
+    to {opacity: 1}
+  }

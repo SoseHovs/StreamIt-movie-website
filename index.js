@@ -3,10 +3,10 @@ const next = document.querySelectorAll('.next');
 const prev = document.querySelectorAll('.prev');
 let direction = 0;
 
-let width=slider[1].children[1].offsetWidth
+let width=slider[1].children[1].offsetWidth;
 let style= getComputedStyle(slider[1].children[1]);
 let itemMarginRight= style.marginRight;
-let itemMarginLeft=style.marginLeft
+let itemMarginLeft=style.marginLeft;
 let margins=parseInt(itemMarginRight)+parseInt(itemMarginLeft)
 let fullWidth = width+margins
 
@@ -155,3 +155,6 @@ item.addEventListener('click', (event)=>{
 
 
 })
+
+
+
