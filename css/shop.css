@@ -59,7 +59,7 @@ padding: 0 1.5%;
     color: white;
 }
 .sub_menu{
-z-index: 1;
+
     background-color: #000000;
 }
 .navigation_item:hover{
@@ -78,6 +78,9 @@ z-index: 1;
 font-size: 14px;
 }
 
+.home_pages{
+    width: 90%;
+}
 
 .navigation_item:nth-child(5) {
     position:unset
@@ -85,6 +88,7 @@ font-size: 14px;
 
 .sub_menu-measure{
     top: 178px;
+    z-index: 1;
 }
 input{
     background-color: #000000;
@@ -126,6 +130,10 @@ input{
 }
 
 .movie_item img{
+    filter: brightness(1);
+}
+
+.movie_item:hover img{
     filter: brightness(1);
 }
 
@@ -192,4 +200,76 @@ input{
   @keyframes fade {
     from {opacity: .1} 
     to {opacity: 1}
+  }
+
+
+
+
+
+  .bestSelling_list{
+display: flex;
+align-items: center;
+
+  }
+
+  .bestSelling-item{
+    width: 29.5%;
+    height: 18vw;
+    flex-shrink: 0;
+    margin: 1.5vw;
+    position: relative;
+  }
+
+  .bestSelling-item img{
+    width: 100%;
+    height: 100%;
+
+  }
+  .bestSelling-item b{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    white-space: nowrap;
+    text-transform: capitalize;
+  }
+
+  .bestSelling h3{
+
+    color: #ffffffed;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+
+  }
+
+  .bestSelling_Categories{
+    margin: 7% 10.5%;
+   
+overflow-x: hidden;
+
+  }
+  .bestSelling{
+    position: relative;
+  }
+
+  .action_btns{
+    position: absolute;
+    top: 60%;
+    transform: translate(0, -60%);
+    z-index: 1;
+  }
+
+
+  .left_btn{
+    left: 8%;
+  }
+  .right_btn{
+
+    right: 8%
   }
