@@ -8,8 +8,11 @@
     padding: 0;
    scrollbar-width: thin; 
    box-sizing: border-box; 
-}
 
+}
+*::selection{
+   background-color: rgb(229, 9, 20);
+}
 
 html,body {
   
